@@ -1,0 +1,12 @@
+        {/* Outer Shield Border */}
+        {!(isTitan || isCyber || isTurbo) && (
+          <div
+            className={`absolute inset-2 sm:inset-2.5 ${containerShape} border-2 ${isApex ? 'border-amber-400/40' : 'border-white/10'} ${statusStyling.glowAura} bg-[#04060b]/90 transition-all duration-500 backdrop-blur-md overflow-hidden`}
+          >
+            {/* Subtle Cyberpunk CRT Scanline Grid */}
+            <div className="absolute inset-0 opacity-15 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.8)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]" />
+          </div>
+        )}
+
+        {/* 3. Central Holographic Core Glass Disc */}
+        <div className={`relative z-20 w-[195px] sm:w-[218px] xl:w-[235px] h-[195px] sm:h-[218px] xl:h-[235px] flex flex-col items-center justify-center p-2.5 ${(isTitan || isCyber || isTurbo) ? '' : `${innerShape} ${isApex ? 'bg-gradient-to-b from-[#1a1303]/95 via-[#0a0701]/95 to-[#050300]/95 border-amber-500/30' : 'bg-gradient-to-b from-[#080d19]/95 via-[#030509]/95 to-[#010204]/95 border-white/15'} border shadow-[inset_0_4px_30px_rgba(0,0,0,0.95)]`}`}>
